@@ -2,40 +2,37 @@ import React from "react";
 
 function FeaturedCarousel() {
   return (
-    <div className="container my-4"> {/* Add container and some margin */}
+    <div className="container my-4"> 
       <div
         id="featuredCarousel"
         className="carousel slide"
         data-bs-ride="carousel"
       >
         <div className="carousel-inner">
-          {/* Carousel Item 1 */}
           <div className="carousel-item active">
             <img
-              src="https://via.placeholder.com/1200x300.png?text=Featured+Movie+1"
+              src="https://pyxis.nymag.com/v1/imgs/744/00b/e7a1b3ec0132c5284126636a09c367ed43-13-movie-posters-infographic.1x.rsocial.w1200.jpg"
               className="d-block w-100"
               alt="Featured 1"
             />
           </div>
-          {/* Carousel Item 2 */}
+          
           <div className="carousel-item">
             <img
-              src="https://via.placeholder.com/1200x300.png?text=Featured+Movie+2"
+              src="https://th.bing.com/th/id/OIP.l2VQozQFI3pXq9mQpHx1DwAAAA?w=202&h=262&c=7&r=0&o=5&dpr=1.3&pid=1.7"
               className="d-block w-100"
               alt="Featured 2"
             />
           </div>
-          {/* Carousel Item 3 */}
           <div className="carousel-item">
             <img
-              src="https://via.placeholder.com/1200x300.png?text=Featured+Movie+3"
+              src="https://th.bing.com/th/id/OIP.OTTQ8Zh2Ok8RvPBG8UIsIAHaLH?w=202&h=303&c=7&r=0&o=5&dpr=1.3&pid=1.7"
               className="d-block w-100"
               alt="Featured 3"
             />
           </div>
         </div>
 
-        {/* Carousel Controls */}
         <button
           className="carousel-control-prev"
           type="button"

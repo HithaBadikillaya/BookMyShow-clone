@@ -6,32 +6,25 @@ import { Link } from 'react-router-dom';
 const moviesData = [
   {
     id: 1,
-    title: "Movie Title 1",
-    posterUrl: "https://via.placeholder.com/200x300?text=Movie+1",
-    description: "Short description or details for movie 1.",
-    trailerUrl: "https://www.youtube.com/embed/trailer-for-movie1",
+    title: "Marvel Avengers",
+      posterUrl: "https://th.bing.com/th/id/OIP.kYCMhhg_70wNKu1LfOY-LAHaJY?pid=ImgDet&w=179&h=226&c=7&dpr=1.3",
+      description: "Earth's mightiest heroes unite to face a new threat.",
+      trailerUrl: "https://www.youtube.com/embed/eOrNdBpGMv8?si=88SOL7hD4iezDtUL", 
   },
   {
     id: 2,
-    title: "Movie Title 2",
-    posterUrl: "https://via.placeholder.com/200x300?text=Movie+2",
-    description: "Short description or details for movie 2.",
-    trailerUrl: "https://www.youtube.com/embed/trailer-for-movie2",
+    title: "Officer",
+      posterUrl: "https://th.bing.com/th/id/OIP.pzzOmt-x72zv4mbb9q-i-wHaKX?w=202&h=282&c=7&r=0&o=5&dpr=1.3&pid=1.7",
+      description: "An intense thriller following a dedicated officer.",
+      trailerUrl: "https://www.youtube.com/embed/EoCPtpWmFtc?si=NIY3jLett-2t2VaN", 
   },
   {
     id: 3,
-    title: "Movie Title 3",
-    posterUrl: "https://via.placeholder.com/200x300?text=Movie+3",
-    description: "Short description or details for movie 3.",
-    trailerUrl: "https://www.youtube.com/embed/trailer-for-movie3",
-  },
-  {
-    id: 4,
-    title: "Movie Title 4",
-    posterUrl: "https://via.placeholder.com/200x300?text=Movie+4",
-    description: "Short description or details for movie 4.",
-    trailerUrl: "https://www.youtube.com/embed/trailer-for-movie4",
-  },
+    title: "Mickey 17",
+      posterUrl: "https://th.bing.com/th/id/OIP.PzadAlFg6monCnkUEWBPQwHaKX?w=115&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7",
+      description: "A sci-fi adventure on a distant planet.",
+      trailerUrl: "https://www.youtube.com/embed/osYpGSz_0i4?si=XR6r8OndBO_dha_0", 
+  }
 ];
 
 function Movies() {
@@ -50,7 +43,7 @@ function Movies() {
 
   return (
     <Container className="my-4">
-      <h2>Movies in Mumbai</h2>
+      <h2>Trending Movies</h2>
       <Row>
         {moviesData.map((movie) => (
           <Col key={movie.id} md={3} sm={6} xs={12} className="mb-4">
@@ -76,7 +69,6 @@ function Movies() {
         ))}
       </Row>
 
-      {/* Trailer Modal */}
       <Modal show={showTrailer} onHide={closeTrailerModal} size="lg" centered>
         <Modal.Header closeButton>
           <Modal.Title>Trailer</Modal.Title>

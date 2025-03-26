@@ -1,8 +1,7 @@
-// src/components/NavbarComponent.js
 import React from 'react';
 import { Navbar, Nav, Container } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import logo from '../../public/assets/logo.jpeg'; // Adjust the path based on your folder structure
+import logo from '../../public/assets/logo.jpeg'; 
 
 function NavbarComponent() {
   return (
@@ -18,8 +17,8 @@ function NavbarComponent() {
           <img
             src={logo}
             alt="BookMyShow Logo"
-            width="100"  // Increased width
-            height="100" // Increased height
+            width="100" 
+            height="100" 
             className="d-inline-block align-top me-2"
           />
           BookMyShow

@@ -1,15 +1,11 @@
-// src/pages/Booking.jsx
 import React, { useState } from "react";
 
 function Booking() {
-  // State for seat selection
   const [selectedSeats, setSelectedSeats] = useState([]);
 
-  // Define seat rows (A-E) and columns (1-6)
   const rows = ["A", "B", "C", "D", "E"];
   const cols = [1, 2, 3, 4, 5, 6];
 
-  // Toggle seat selection
   const toggleSeat = (seatId) => {
     setSelectedSeats((prev) =>
       prev.includes(seatId)
@@ -18,7 +14,6 @@ function Booking() {
     );
   };
 
-  // States for booking form
   const [name, setName] = useState("");
   const [cardNumber, setCardNumber] = useState("");
   const [expiry, setExpiry] = useState("");
@@ -38,7 +33,6 @@ Name: ${name}`
       <div className="card shadow rounded p-4">
         <h2 className="text-center mb-4">Confirm Booking</h2>
 
-        {/* Seat Selection Section */}
         <div className="mb-4">
           <h4 className="mb-3">Select Your Seats</h4>
           <div className="d-flex flex-column align-items-center">
@@ -66,7 +60,6 @@ Name: ${name}`
           </div>
         </div>
 
-        {/* Booking Form */}
         <form onSubmit={handleSubmit}>
           <div className="mb-3">
             <label htmlFor="name" className="form-label">

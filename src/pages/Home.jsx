@@ -2,71 +2,67 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 function Home() {
-  // Sample data for carousel and recommended cards
   const featured = [
     {
       title: "Blockbuster Premiere",
-      image: "https://via.placeholder.com/1200x400.png?text=Featured+Movie",
+      image: "https://pyxis.nymag.com/v1/imgs/744/00b/e7a1b3ec0132c5284126636a09c367ed43-13-movie-posters-infographic.1x.rsocial.w1200.jpg",
       description: "Catch the world premiere of the summer blockbuster!",
     },
     {
       title: "Live Concert Extravaganza",
-      image: "https://via.placeholder.com/1200x400.png?text=Live+Concert",
+      image: "https://th.bing.com/th/id/OIP.l2VQozQFI3pXq9mQpHx1DwAAAA?w=202&h=262&c=7&r=0&o=5&dpr=1.3&pid=1.7",
       description: "Experience the electrifying live concert of top artists.",
     },
     {
       title: "Stand-Up Comedy Night",
-      image: "https://via.placeholder.com/1200x400.png?text=Comedy+Night",
+      image: "https://th.bing.com/th/id/OIP.OTTQ8Zh2Ok8RvPBG8UIsIAHaLH?w=202&h=303&c=7&r=0&o=5&dpr=1.3&pid=1.7",
       description: "Laugh out loud with the best comedians.",
     },
   ];
 
   const recommended = [
     {
-      title: "Chhavi 2",
-      posterUrl: "https://via.placeholder.com/200x300.png?text=Chhavi+2",
+      title: "Chhava",
+      posterUrl: "https://www.filmibeat.com/img/2022/05/chhava-1652439802.jpeg",
       releaseDate: "2025-05-12",
       rating: 4.5,
       description: "The thrilling sequel to the blockbuster Chhavi.",
-      trailerUrl: "https://www.youtube.com/embed/trailer-for-chhavi2", // Unique trailer link
+      trailerUrl: "https://www.youtube.com/embed/zewGwHyb274?si=1XcewXoBarCdNYpv", 
     },
     {
       title: "Marvel Avengers",
-      posterUrl: "https://via.placeholder.com/200x300.png?text=Avengers",
+      posterUrl: "https://th.bing.com/th/id/OIP.kYCMhhg_70wNKu1LfOY-LAHaJY?pid=ImgDet&w=179&h=226&c=7&dpr=1.3",
       releaseDate: "2024-11-20",
       rating: 4.7,
       description: "Earth's mightiest heroes unite to face a new threat.",
-      trailerUrl: "https://www.youtube.com/embed/trailer-for-avengers", // Unique trailer link
+      trailerUrl: "https://www.youtube.com/embed/eOrNdBpGMv8?si=88SOL7hD4iezDtUL", 
     },
     {
       title: "Mickey 17",
-      posterUrl: "https://via.placeholder.com/200x300.png?text=Mickey+17",
+      posterUrl: "https://th.bing.com/th/id/OIP.PzadAlFg6monCnkUEWBPQwHaKX?w=115&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7",
       releaseDate: "2026-02-10",
       rating: 4.3,
       description: "A sci-fi adventure on a distant planet.",
-      trailerUrl: "https://www.youtube.com/embed/trailer-for-mickey17", // Unique trailer link
+      trailerUrl: "https://www.youtube.com/embed/osYpGSz_0i4?si=XR6r8OndBO_dha_0", 
     },
     {
       title: "Officer",
-      posterUrl: "https://via.placeholder.com/200x300.png?text=Officer",
+      posterUrl: "https://th.bing.com/th/id/OIP.pzzOmt-x72zv4mbb9q-i-wHaKX?w=202&h=282&c=7&r=0&o=5&dpr=1.3&pid=1.7",
       releaseDate: "2025-08-01",
       rating: 4.1,
       description: "An intense thriller following a dedicated officer.",
-      trailerUrl: "https://www.youtube.com/embed/trailer-for-officer", // Unique trailer link
+      trailerUrl: "https://www.youtube.com/embed/EoCPtpWmFtc?si=NIY3jLett-2t2VaN", 
     },
   ];
 
-  // State for handling trailer modal
   const [showTrailer, setShowTrailer] = useState(false);
   const [trailerUrl, setTrailerUrl] = useState("");
 
-  // Function to open the trailer modal
   const openTrailerModal = (url) => {
     setTrailerUrl(url);
     setShowTrailer(true);
   };
 
-  // Function to close the trailer modal
   const closeTrailerModal = () => {
     setTrailerUrl("");
     setShowTrailer(false);
@@ -74,7 +70,6 @@ function Home() {
 
   return (
     <>
-      {/* Carousel Section */}
       <div id="featuredCarousel" className="carousel slide" data-bs-ride="carousel">
         <div className="carousel-indicators">
           {featured.map((_, idx) => (
@@ -125,7 +120,6 @@ function Home() {
         </button>
       </div>
 
-      {/* Recommended Cards Section */}
       <div className="container my-4">
         <h3 className="text-center mb-4">Recommended for You</h3>
         <div className="row">
@@ -164,7 +158,6 @@ function Home() {
         </div>
       </div>
 
-      {/* Trailer Modal */}
       {showTrailer && (
         <div
           className="modal show d-block"

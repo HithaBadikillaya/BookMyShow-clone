@@ -6,27 +6,47 @@ import { Link } from 'react-router-dom';
 const streamsData = [
   {
     id: 1,
-    title: 'Stream 1',
-    posterUrl: 'https://via.placeholder.com/200x300?text=Stream+1',
-    description: 'Short details about stream 1.',
+    title: 'Killing Eye',
+    posterUrl: 'https://th.bing.com/th/id/OIP.pcq5Jfmm9zn7By__PTaluQAAAA?rs=1&pid=ImgDetMain',
+    description: 'A thrilling psychological drama that keeps you on the edge of your seat.',
+    details: {
+      releaseDate: '2023-11-10',
+      genre: 'Thriller, Drama',
+      duration: '1h 45m',
+    },
   },
   {
     id: 2,
-    title: 'Stream 2',
-    posterUrl: 'https://via.placeholder.com/200x300?text=Stream+2',
-    description: 'Short details about stream 2.',
+    title: '1899',
+    posterUrl: 'https://th.bing.com/th/id/OIP.IB5V3WDJgs2UI2O4d6w9KQHaNJ?w=187&h=333&c=7&r=0&o=5&dpr=1.3&pid=1.7',
+    description: 'A mysterious voyage that unravels hidden secrets in the past.',
+    details: {
+      releaseDate: '2023-09-15',
+      genre: 'Mystery, Historical',
+      duration: '2h 10m',
+    },
   },
   {
     id: 3,
-    title: 'Stream 3',
-    posterUrl: 'https://via.placeholder.com/200x300?text=Stream+3',
-    description: 'Short details about stream 3.',
+    title: 'Wednesday',
+    posterUrl: 'https://th.bing.com/th/id/OIP.7ACltNCPixH2HYZPZ64cDwHaJQ?w=202&h=253&c=7&r=0&o=5&dpr=1.3&pid=1.7',
+    description: 'A dark and quirky series that explores the life of a peculiar teen.',
+    details: {
+      releaseDate: '2022-10-12',
+      genre: 'Comedy, Horror',
+      duration: '45m per episode',
+    },
   },
   {
     id: 4,
-    title: 'Stream 4',
-    posterUrl: 'https://via.placeholder.com/200x300?text=Stream+4',
-    description: 'Short details about stream 4.',
+    title: 'Loki',
+    posterUrl: 'https://th.bing.com/th/id/OIP.Ge3VkFpxtIoER_6LeRcfXwHaJQ?w=202&h=253&c=7&r=0&o=5&dpr=1.3&pid=1.7',
+    description: 'Follow the mischievous Loki on his chaotic adventures through time.',
+    details: {
+      releaseDate: '2021-06-09',
+      genre: 'Fantasy, Action',
+      duration: '50m per episode',
+    },
   },
 ];
 
@@ -42,6 +62,11 @@ function Stream() {
               <Card.Body>
                 <Card.Title>{stream.title}</Card.Title>
                 <Card.Text>{stream.description}</Card.Text>
+                <Card.Text>
+                  <strong>Release Date:</strong> {stream.details.releaseDate}<br />
+                  <strong>Genre:</strong> {stream.details.genre}<br />
+                  <strong>Duration:</strong> {stream.details.duration}
+                </Card.Text>
                 <Link to="/booking" className="btn btn-primary">
                   Book Now
                 </Link>
